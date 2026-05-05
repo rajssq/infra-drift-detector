@@ -1,0 +1,14 @@
+repository: rajssq/infra-drift-detector
+
+expected:
+  secrets:
+    - name: API_KEY
+    - name: DATABASE_URL
+
+  variables:
+    - name: NODE_ENV
+      value: production
+
+  branch_protection:
+    - branch: main
+      require_pr: true

@@ -1,0 +1,24 @@
+name: Drift Check
+
+on:
+  schedule:
+    - cron: "0 9 * * 1" # toda segunda às 9h
+  workflow_dispatch: # permite rodar manualmente
+
+jobs:
+  detect:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run drift detector
+        run: python src/detector.py ${{ secrets.GH_TOKEN }}
