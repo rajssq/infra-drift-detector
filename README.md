@@ -1,4 +1,12 @@
+## Demo
+
+> Terminal output after running the detector:
+
+![Demo](docs/demo.png)
+
 # 🔍 Infra Drift Detector
+
+![Drift Check](https://github.com/rajssq/infra-drift-detector/actions/workflows/drift-check.yml/badge.svg)
 
 A CLI tool that compares your repository's actual state against a declarative config — and reports what's missing or misconfigured.
 
