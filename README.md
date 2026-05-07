@@ -1,7 +1,5 @@
 ## Demo
 
-> Terminal output after running the detector:
-
 ![Demo](docs/demo.png)
 
 # 🔍 Infra Drift Detector
